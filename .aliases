@@ -1,0 +1,142 @@
+# ---------------------------------------------------------------------------
+# NAVIGATE AROUND
+# ---------------------------------------------------------------------------
+
+# get rid of command not found
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .3='cd ../../..'
+alias .....='cd ../../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias .7='cd ../../../../../../..'
+
+
+# ---------------------------------------------------------------------------
+# SENSIBLE COMMAND DEFAULTS
+# ---------------------------------------------------------------------------
+
+# Parenting changing perms on /
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+# confirm and recursive
+alias cp='cp -ir'
+alias df='df -hPT'
+alias du='du -ch'
+alias free='free -hlt'
+# case insensitive and recursive
+alias grep='grep -ir --color=auto'
+# super kill
+alias kill='kill -9'
+# confirm
+alias ln='ln -i'
+# Create parent intermediate directories on demand
+alias mkdir='mkdir -pv'
+# Make mount command output pretty and human readable format
+alias mount='mount | column -t'
+# confirm
+alias mv='mv -i'
+# attempt 5 times
+alias ping='ping -c 5'
+# do not delete / or prompt if deleting more than 3 files at a time
+alias rm='rm -I --preserve-root'
+# Resume wget by default
+alias wget='wget -c'
+
+case $OSTYPE in
+  linux-gnu)
+    # colorize
+    alias diff='colordiff'
+    alias ls='ls --color=auto'
+    # readable with low/hi/total
+    alias free='free -hlt'
+    ;;
+  "darwin"*)
+    alias ls='ls -G'
+    ;;
+esac
+
+# ---------------------------------------------------------------------------
+# NEW COMMANDS
+# ---------------------------------------------------------------------------
+
+# show only one level deep
+alias du1='du -d 1'
+# 100 pings with little pause in between
+alias fastping='ping -c 100 -s.2'
+alias h='history'
+alias hgrep='history | grep'
+# get web server headers
+alias header='curl -I'
+# find out if remote server supports gzip / mod_deflate or not
+alias headerc='curl -I --compress'
+alias j='jobs -l'
+alias ll='ls -al'
+# show only hidden files
+alias l.='ls -d .*'
+alias m='more'
+# show PATH var in a pretty way
+alias path='echo -e ${PATH//:/\\n}'
+# show open ports
+alias ports='netstat -tulanp'
+alias nowtime='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+alias replace='find . -type f -print0 | xargs -0 sed -i'
+alias root='sudo -i'
+# Generate sha1 digest
+alias sha1='openssl sha1'
+# reload your bash config
+alias src='source ~/.bash_profile'
+alias su='sudo -i'
+alias tf='tail -f'
+
+# pass halt/reboot via sudo
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+
+# Vim
+alias vi=vim
+alias svi='sudo vi'
+alias vis='vim "+set si"'
+alias edit='vim'
+
+case $OSTYPE in
+  linux-gnu)
+    alias pg='ps -auxf | grep'
+    # get top process eating cpu/memory
+    alias pscpu='ps -auxf | sort -nr -k 3'
+    alias pscpu10='ps -auxf | sort -nr -k 3 | head -10'
+    alias psmem='ps auxf | sort -nr -k 4'
+    alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+    ;;
+  "darwin"*)
+    alias pg='ps -eaf | grep'
+    # get top process eating cpu/memory
+    alias pscpu='ps -axf | sort -nr -k 3'
+    alias pscpu10='ps -axf | sort -nr -k 3 | head -10'
+    alias psmem='ps -axf | sort -nr -k 4'
+    alias psmem10='ps -axf | sort -nr -k 4 | head -10'
+    ;;
+esac
+
+# ---------------------------------------------------------------------------
+# FOR DEVELOPERS
+# ---------------------------------------------------------------------------
+
+alias npmi='npm install -S'
+alias npmid='npm install -D'
+alias npmu='npm uninstall -S'
+alias npmud='npm uninstall -D'
+alias nvms='nvm use stable'
+
+alias py2='python2'
+alias py3='python3'
+
+alias agx='ansible-galaxy'
+alias ap='ansible-playbook'
