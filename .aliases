@@ -108,7 +108,7 @@ alias edit='vim'
 
 case $OSTYPE in
   linux-gnu)
-    alias pg='ps -auxf | grep'
+    alias psgrep='ps -auxf | grep'
     # get top process eating cpu/memory
     alias pscpu='ps -auxf | sort -nr -k 3'
     alias pscpu10='ps -auxf | sort -nr -k 3 | head -10'
@@ -116,7 +116,7 @@ case $OSTYPE in
     alias psmem10='ps auxf | sort -nr -k 4 | head -10'
     ;;
   "darwin"*)
-    alias pg='ps -eaf | grep'
+    alias psgrep='ps -eaf | grep'
     # get top process eating cpu/memory
     alias pscpu='ps -axf | sort -nr -k 3'
     alias pscpu10='ps -axf | sort -nr -k 3 | head -10'
@@ -140,3 +140,11 @@ alias py3='python3'
 
 alias agx='ansible-galaxy'
 alias ap='ansible-playbook'
+
+alias g=git
+
+alias vg=vagrant
+alias vup='vagrant up'
+alias vsu='vagrant suspend'
+alias vde='vagrant destroy'
+alias vssh='vagrant ssh'
