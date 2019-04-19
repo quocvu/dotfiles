@@ -20,12 +20,8 @@ alias .7='cd ../../../../../../..'
 # ---------------------------------------------------------------------------
 
 # Parenting changing perms on /
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
 # confirm and recursive
 alias cp='cp -ir'
-alias df='df -hPT'
 alias du='du -ch'
 alias free='free -hlt'
 # case insensitive and recursive
@@ -42,21 +38,27 @@ alias mount='mount | column -t'
 alias mv='mv -i'
 # attempt 5 times
 alias ping='ping -c 5'
-# do not delete / or prompt if deleting more than 3 files at a time
-alias rm='rm -I --preserve-root'
 # Resume wget by default
 alias wget='wget -c'
 
 case $OSTYPE in
   linux-gnu)
+    alias chown='chown --preserve-root'
+    alias chmod='chmod --preserve-root'
+    alias chgrp='chgrp --preserve-root'
+    alias df='df -hPT'
     # colorize
     alias diff='colordiff'
     alias ls='ls --color=auto'
     # readable with low/hi/total
     alias free='free -hlt'
+    # do not delete / or prompt if deleting more than 3 files at a time
+    alias rm='rm -I --preserve-root'
     ;;
   "darwin"*)
+    alias df='df -hP'
     alias ls='ls -G'
+    alias rm='rm -i'
     ;;
 esac
 

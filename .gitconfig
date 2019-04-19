@@ -41,7 +41,7 @@
 
 [color "branch"]
     current = yellow reverse
-    local = yello
+    local = yellow
     remote = green
 
 [color "diff"]
@@ -88,7 +88,8 @@
     churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
 
     ci = !git add -A && git commit -m
-    co = checkout -b
+    co = checkout
+    cob = checkout -b
     cp = cherry-pick
 
     # View the log and diff for a commit (previous if no SHA1 provided)
