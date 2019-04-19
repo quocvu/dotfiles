@@ -109,7 +109,7 @@
     hist = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
     # show last commit
-    last "log -1 HEAD"
+    last = log -1 HEAD
 
     # Return a list of commit SHA1s
     ls = "!f() { git log $* | grep '^commit ' | cut -f 2 -d ' '; }; f"
