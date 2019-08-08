@@ -67,6 +67,8 @@ esac
 # ---------------------------------------------------------------------------
 
 # show only one level deep
+alias dc=docker-compose
+alias dk=docker
 alias du1='du -d 1'
 # 100 pings with little pause in between
 alias fastping='ping -c 100 -s.2'
