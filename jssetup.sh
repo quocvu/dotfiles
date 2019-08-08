@@ -4,12 +4,7 @@ echo "==========================================="
 echo "  Setting up your Node project"
 echo "==========================================="
 
-DIR=$1
 FILES=( ".editorconfig" ".eslintrc" ".gitconfig" ".jshintrc" ".npmrc" )
-
-mkdir $DIR
-cd $DIR
-npm init
 
 for f in "${FILES[@]}"
 do 
