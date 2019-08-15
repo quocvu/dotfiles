@@ -138,6 +138,8 @@ alias npmid='npm install -D'
 alias npmu='npm uninstall -S'
 alias npmud='npm uninstall -D'
 alias nvms='nvm use stable'
+# install modules for testing, code style, etc
+alias npmit='npm install -D babel-eslint eslint eslint-config-airbnb eslint-plugin-import mocha rewire should sinon'
 
 alias py2='python2'
 alias py3='python3'
