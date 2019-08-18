@@ -4,7 +4,7 @@ echo "==========================================="
 echo "  Setting up your Node project"
 echo "==========================================="
 
-FILES=( ".editorconfig" ".eslintrc" ".gitconfig" "jest.config.js" ".jshintrc" ".npmrc" )
+FILES=( ".editorconfig" ".eslintrc" "jest.config.js" ".jshintrc" ".npmrc" )
 
 for f in "${FILES[@]}"
 do
