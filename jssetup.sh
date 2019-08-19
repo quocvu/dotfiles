@@ -14,7 +14,7 @@ done
 
 curl -s https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore
 
-npm install -s -D babel-eslint babel-jest babel-plugin-rewir eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier jest jest-extended prettier
+npm install -s -D babel-eslint babel-jest babel-plugin-rewire eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier jest jest-extended prettier
 
 echo "All done!"
 exit 0
