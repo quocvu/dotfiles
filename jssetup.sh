@@ -4,7 +4,7 @@ echo "==========================================="
 echo "  Setting up your Node project"
 echo "==========================================="
 
-FILES=( ".editorconfig" ".eslintrc" ".gitconfig" "jest.config.js" ".jshintrc" ".npmrc" )
+FILES=( ".editorconfig" ".eslintrc" ".gitconfig" "jest.config.js" ".jshintrc" ".npmrc" ".prettierrc" )
 
 for f in "${FILES[@]}"
 do
@@ -14,7 +14,7 @@ done
 
 curl -s https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore
 
-npm install -s -D babel-eslint babel-jest babel-plugin-rewir eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier jest prettier
+npm install -s -D babel-eslint babel-jest babel-plugin-rewir eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier jest jest-extended prettier
 
 echo "All done!"
 exit 0
