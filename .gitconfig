@@ -8,6 +8,9 @@
     excludesfile = ~/.gitignore_global
     filemode = false
 
+[branch]
+    autosetuprebase = always
+
 [diff]
     mnemonicprefix = true
 
