@@ -18,4 +18,3 @@ npm install -s -D babel-eslint babel-jest babel-plugin-rewire eslint eslint-conf
 npx install-peerdeps --dev eslint-config-airbnb
 
 echo "All done!"
-exit 0
