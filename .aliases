@@ -66,6 +66,8 @@ esac
 # NEW COMMANDS
 # ---------------------------------------------------------------------------
 
+# count number of files in each sub folder
+alias filecount='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
 # show only one level deep
 alias dc=docker-compose
 alias dk=docker
@@ -90,6 +92,7 @@ alias ports='netstat -tulanp'
 alias nowtime='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
 alias replace='find . -type f -print0 | xargs -0 sed -i'
+alias rmdsstore='find . -name ".DS_Store" -depth -exec rm {} \;'
 alias root='sudo -i'
 # Generate sha1 digest
 alias sha1='openssl sha1'
@@ -148,6 +151,8 @@ alias agx='ansible-galaxy'
 alias ap='ansible-playbook'
 
 alias g=git
+alias q=quasar
+alias sls=serverless
 
 alias vg=vagrant
 alias vup='vagrant up'
