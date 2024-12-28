@@ -25,7 +25,7 @@ alias cp='cp -ir'
 alias du='du -ch'
 alias free='free -hlt'
 # case insensitive and recursive
-alias grep='grep -ir --color=auto'
+alias grep='grep -i --color=auto'
 # super kill
 alias kill='kill -9'
 # confirm
@@ -144,8 +144,15 @@ alias nvms='nvm use stable'
 # install modules for testing, code style, etc
 alias npmit='npm install -D babel-eslint eslint eslint-config-airbnb eslint-plugin-import mocha rewire should sinon'
 
+alias py='python'
 alias py2='python2'
 alias py3='python3'
+alias nvenv='python -m venv .venv'
+alias avenv='source .venv/bin/activate'
+alias pipi='python -m pip install'
+alias pipu='python -m pip uninstall'
+alias pipfreeze='python -m pip freeze > requirements.txt'
+alias pytest='python -m unittest -v'
 
 alias agx='ansible-galaxy'
 alias ap='ansible-playbook'
