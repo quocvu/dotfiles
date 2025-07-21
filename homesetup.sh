@@ -4,7 +4,7 @@ echo "==========================================="
 echo "  Setting up your home directory"
 echo "==========================================="
 
-FILES=( ".aliases" ".editorconfig" ".gitconfig" )
+FILES=( ".bash_aliases" ".editorconfig" ".eslintrc" ".gitconfig" ".jshintrc" ".npmrc" ".nvmrc" ".prettierrc" )
 
 for f in "${FILES[@]}"
 do
