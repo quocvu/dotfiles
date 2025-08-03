@@ -4,7 +4,7 @@ echo "==========================================="
 echo "  Setting up your home directory"
 echo "==========================================="
 
-FILES=( ".bash_aliases" ".editorconfig" ".eslintrc" ".gitconfig" ".jshintrc" ".npmrc" ".nvmrc" ".prettierrc" )
+FILES=( ".bash_aliases" ".editorconfig" ".eslintrc" ".gitconfig" ".jshintrc" ".npmrc" ".nvmrc" ".prettierrc" ".tmux.conf" "bin/mnts3" ".gemini/settings.json" ".gemini/commands/cm.toml" ".gemini/commands/design.toml" ".gemini/commands/feat.toml" ".gemini/commands/story.toml" ".gemini/commands/test.toml" ".gemini/CODER_ROLE.md" ".gemini/DESIGNER_ROLE.md")
 
 for f in "${FILES[@]}"
 do

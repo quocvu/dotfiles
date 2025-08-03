@@ -1,0 +1,7 @@
+#!/bin/sh
+
+BUCKETS="bloomingquotes laughtilyoudrop 1001quizzes"
+
+for bkt in $BUCKETS; do
+  s3fs $bkt $HOME/aws_s3/$bkt -o passwd_file=$HOME/.passwd-s3fs -o url=https://s3.us-east-1.amazonaws.com
+done

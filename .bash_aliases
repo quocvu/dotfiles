@@ -24,8 +24,6 @@ alias .7='cd ../../../../../../..'
 alias cp='cp -ir'
 alias du='du -ch'
 alias free='free -hlt'
-# case insensitive and recursive
-alias grep='grep -i --color=auto'
 # super kill
 alias kill='kill -9'
 # confirm
@@ -54,6 +52,12 @@ case $OSTYPE in
     alias free='free -hlt'
     # do not delete / or prompt if deleting more than 3 files at a time
     alias rm='rm -I --preserve-root'
+    # use ripgrep
+    alias grep=rg
+    # use bat
+    alias cat=batcat
+    # use fd
+    alias find=fdfind
     ;;
   "darwin"*)
     alias df='df -hP'
@@ -69,8 +73,6 @@ esac
 # count number of files in each sub folder
 alias filecount='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
 # show only one level deep
-alias dc=docker-compose
-alias dk=docker
 alias du1='du -d 1'
 # 100 pings with little pause in between
 alias fastping='ping -c 100 -s.2'
@@ -97,7 +99,7 @@ alias root='sudo -i'
 # Generate sha1 digest
 alias sha1='openssl sha1'
 # reload your bash config
-alias src='source ~/.bash_profile'
+alias src='source ~/.bashrc'
 alias su='sudo -i'
 alias tf='tail -f'
 
@@ -158,11 +160,6 @@ alias agx='ansible-galaxy'
 alias ap='ansible-playbook'
 
 alias g=git
-alias q=quasar
-alias sls=serverless
-
-alias vg=vagrant
-alias vup='vagrant up'
-alias vsu='vagrant suspend'
-alias vde='vagrant destroy'
-alias vssh='vagrant ssh'
+alias dc='sudo docker-compose'
+alias dk='sudo docker'
+alias md='uv run modal'
