@@ -91,6 +91,7 @@ fi
 # Using Extension Manager, install
 # * https://extensions.gnome.org/extension/16/auto-move-windows/
 # * https://extensions.gnome.org/extension/779/clipboard-indicator/
+# * https://extensions.gnome.org/extension/3539/downfall/
 
 # * Link google account: Settings > Online Accounts
 # * Generate ssh key `ssh-keygen` then add to github account
