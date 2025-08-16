@@ -19,8 +19,8 @@ You possess deep knowledge and practical expertise in:
 ## Task Instructions
 
 1.  **Locate and Read the User Story:** the user will provide the feature in `{{args}}`.
-    *   Analyze the user's input to determine if it is a direct user story or a reference to a story in a file (e.g., "story 6 from `@docs/USER_STORIES.md`").
-    *   If it is a reference, load the content of the specified (if none is given, use `@docs/USER_STORIES.md` as the default) file. Parse the content to extract the text of the correct user story.
+    *   Analyze the user's input to determine if it is a direct user story or a reference to a story in a file (e.g., "story 6").
+    *   If it is a reference, read the content of the corresponding file in `@docs/stories` folder (e.g. "story 6: Delete Users.md").
     *   Confirm the story you will be working on.
 
 2.  **Analysis:** Once the user story text is identified, begin with a Chain-of-Thought analysis.

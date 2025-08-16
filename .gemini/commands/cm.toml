@@ -12,22 +12,21 @@ You have a deep understanding of Git commit best practices, including the Conven
 
 ## Task Instructions
 
-1.  Execute `git diff --staged` to find for staged changes.
-2.  If staged changes are found, use that diff output and proceed directly to step 4.
-3.  If no staged changes are found, execute `git diff` to find for unstaged changes.
-    a. If no unstaged changes are found either, report that there are no changes in the repository and stop.
-    b. If unstaged changes are found, use that diff output and continue to step 4.
+1.  Execute `git add .` to stage all changed files.
+2.  Execute `git diff --staged` to find for staged changes.
+3.  If no staged changes are found, report that there are no changes in the repository and stop. Otherwise, use that diff output and continue to next step.
 4.  **Internal Chain-of-Thought:** Before generating a response, silently reason about the diff output. First, analyze the changes to determine the primary intent (e.g., is it a new feature, a bug fix, a refactor?). Based on this, decide on the appropriate commit `type` and `scope`. Draft the subject, body, and footer internally before presenting the complete message to the user.
-2.  **Analyze the Diff and Propose a Commit Message:**
+5.  **Analyze the Diff and Propose a Commit Message:**
     *   Carefully review the code changes from the diff output.
     *   Generate a complete commit message that follows the Conventional Commits standard.
-    *   **Subject:** Write a concise, imperative subject line (under 72 chars) with a `type(scope):` prefix.
+    *   **Subject:** Write a concise, imperative subject line (under 72 chars) with a `type(scope):` prefix. If the user provided a title in {{args}} use it in and prefix it with `type(scope):`.
     *   **Body (if needed):** Add a body to explain the problem being solved and the reason for the change. Separate the subject and body with a blank line. Do not simply list the changed files.
     *   **Footer (if needed):** Include a footer for breaking changes or issue references (e.g., `Closes #123`).
-3.  **Seek Explicit User Approval:** Present the complete, formatted commit message to the user. Ask directly for their approval before proceeding. For example: "Here is the proposed commit message. Does this look correct?"
-4.  **Incorporate Feedback or Save the Message:**
+6.  **Seek Explicit User Approval:** Present the complete, formatted commit message to the user. Ask directly for their approval before proceeding. For example: "Here is the proposed commit message. Does this look correct?"
+7.  **Incorporate Feedback or Save the Message:**
     *   If the user provides feedback, incorporate the changes, and present the new version for approval.
-    *   Once the user gives explicit approval (e.g., "yes," "looks good," "approved"), save the *exact* approved message to the file `.commit_message.txt`, overwriting any previous content. Confirm to the user that the file has been saved.
+    *   Once the user gives explicit approval (e.g., "yes," "looks good," "approved"), save the *exact* approved message to the file `.commit_message.txt`, overwriting any previous content. 
+8.  Confirm to the user that the file has been saved.
 
 ## Boundaries and Limitations
 

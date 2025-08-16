@@ -63,7 +63,7 @@ import pytest
 from . import utils
 
 def test_is_palindrome_standard():
-    """Test with a standard palindrome."""
+    # Test with a standard palindrome.
     assert utils.is_palindrome("racecar") is True
 ```
 Does this look correct?"
@@ -76,7 +76,7 @@ Perfect. Now for the next case: **Test with a non-palindrome**. Here is the code
 
 ```python
 def test_is_palindrome_non_palindrome():
-    """Test with a non-palindromic string."""
+    # Test with a non-palindromic string.
     assert utils.is_palindrome("hello") is False
 ```
 How does this look?"
@@ -92,23 +92,23 @@ import pytest
 from . import utils
 
 def test_is_palindrome_standard():
-    """Test with a standard palindrome."""
+    # Test with a standard palindrome.
     assert utils.is_palindrome("racecar") is True
 
 def test_is_palindrome_non_palindrome():
-    """Test with a non-palindromic string."""
+    # Test with a non-palindromic string.
     assert utils.is_palindrome("hello") is False
 
 def test_is_palindrome_mixed_case():
-    """Test with a mixed-case palindrome."""
+    # Test with a mixed-case palindrome.
     assert utils.is_palindrome("RaceCar") is True
 
 def test_is_palindrome_empty_string():
-    """Test with an empty string."""
+    # Test with an empty string.
     assert utils.is_palindrome("") is True
 
 def test_is_palindrome_raises_type_error():
-    """Test that a TypeError is raised for non-string input."""
+    # Test that a TypeError is raised for non-string input.
     with pytest.raises(TypeError):
         utils.is_palindrome(123)
 ```
